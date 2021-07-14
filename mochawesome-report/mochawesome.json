@@ -1,0 +1,123 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-07-14T15:18:25.505Z",
+    "end": "2021-07-14T15:18:50.021Z",
+    "duration": 24516,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "45d25efd-61b7-49ab-91d2-736f5451bea0",
+      "title": "",
+      "fullFile": "cypress/integration/examples/test1.spec.js",
+      "file": "cypress/integration/examples/test1.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b3c87424-e6db-4c1a-9903-28a8424ac50d",
+          "title": "Web tests",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Test1: Basic Auth (user and pass: admin)",
+              "fullTitle": "Web tests Test1: Basic Auth (user and pass: admin)",
+              "timedOut": null,
+              "duration": 18700,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://admin:admin@the-internet.herokuapp.com/basic_auth');\ncy.get('h3').should('have.text', 'Basic Auth');\ncy.get('p').should('have.text', '\\n    Congratulations! You must have the proper credentials.\\n  ');",
+              "err": {},
+              "uuid": "020783e5-da2a-4d7a-a84e-9f91e16969b5",
+              "parentUUID": "b3c87424-e6db-4c1a-9903-28a8424ac50d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Test1: Add/Remove Elements",
+              "fullTitle": "Web tests Test1: Add/Remove Elements",
+              "timedOut": null,
+              "duration": 1101,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://the-internet.herokuapp.com/add_remove_elements/');\ncy.get('div[class=example] button').should('have.text', 'Add Element').click();\ncy.get('div[id=elements] button').should('have.text', 'Delete').click();",
+              "err": {},
+              "uuid": "98dfa9fa-b961-4d3f-bb35-b518988ff440",
+              "parentUUID": "b3c87424-e6db-4c1a-9903-28a8424ac50d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "020783e5-da2a-4d7a-a84e-9f91e16969b5",
+            "98dfa9fa-b961-4d3f-bb35-b518988ff440"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 19801,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": true,
+        "json": true
+      },
+      "version": "5.2.0"
+    }
+  }
+}
